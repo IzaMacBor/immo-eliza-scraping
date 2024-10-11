@@ -31,13 +31,15 @@ Immo Eliza Scraping is a web scraping project designed to extract real estate li
 ```
 .
 ├── data/
+│ └── extracted_details.csv
+│ └── filters.csv
 │ └── property_details.csv
 ├── scraper/
 │ └── accept_cookies.ipynb
+  └── filtered_urls.ipynb
 │ └── one_house_immoweb.ipynb
 │ └── properties_details.ipynb
 │ └── scraper.py
-├── xml_files/
 ├── .gitignore
 ├── chromedriver.exe
 ├── main.py
@@ -74,19 +76,13 @@ Immo Eliza Scraping is a web scraping project designed to extract real estate li
 ## 🚀 Usage
 
 1. **Download XML files**:
-   - Run the script `download_xml.py` to download the XML sitemap files and extract property URLs:
-   ```bash
-   python download_xml.py
-   ```
+   - Run the script `filtred_urls.ipynb` to download the XML sitemap files and extract property URLs:
 
 2. **Filter URLs**:
    - The filtered URLs are saved in `filters.csv`.
 
 3. **Scrape Property Details**:
-   - Run the script `scrape_properties.py` to scrape detailed information from the filtered property URLs:
-   ```bash
-   python scrape_properties.py
-   ```
+   - Run the script `main.py` to scrape detailed information from the filtered property URLs:
 
 4. **Output**:
    - The scraped property details will be saved in `property_details.csv`.
